@@ -4,7 +4,12 @@
 
 *For **both** a VM or App Service solution for the CMS app:*
 - *Analyze costs, scalability, availability, and workflow*
-    VM is more expensive and requires more setup, it's scalable but it's considerbaly harder to manually spin multiple vm and configure them to a load balancer. VM might be not as avaliable because more things could wrong. App Service workflow is much easier to get into.
+    | 1 core 1.75 gb ram compute unit | Virtual machine                                     | App Service                                                     |
+    |---------------------------------|-----------------------------------------------------|-----------------------------------------------------------------|
+    | Costs                           | $65                                                 | $54                                                             |
+    | Scalability                     | Scale sets is a bit harder to use                   | Auto scaling is built in which makes it easier to work with     |
+    | Availability                    | 95% ~ 99.95% uptime depending on your configuration | 99.95% uptime for paid Apps, no guarantee for free/shared ones  |
+    | Workflow                        | A bit tedious to use and deploy apps to it          | Using containerized apps makes deployment and config far easier |
 - *Choose the appropriate solution (VM or App Service) for deploying the app*
         App Service
 - *Justify your choice*
@@ -16,3 +21,4 @@
 
 I'll probably won't change my decision unless I'm working with something that won't work with App Service and requires manual deployment to a VM.
 All and all I'm very happy with it.
+
